@@ -1,5 +1,6 @@
 # weather-app
-
+Using https://www.apixu.com API to fetching forecast
+![image](https://user-images.githubusercontent.com/33098616/62136208-4caddf00-b2ec-11e9-855f-a6f06c26c5b6.png)
 ## Project setup
 ```
 npm install
