@@ -22,7 +22,7 @@
      row wrap
      >
          <v-flex
-            xs12 sm6 md4 lg4 xl2
+            xs12 sm6 md3 lg3 xl2
             class="mb-5"
             v-for="(forecastday, _) in weather.forecast.forecastday" :key="_" >
         <v-card  max-width="260px" height="275px" class="mx-auto">
