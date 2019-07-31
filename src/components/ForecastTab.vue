@@ -1,5 +1,4 @@
 <template>
-  <div>
     <v-container>
       <v-layout justify-center>
         <v-flex xs12 sm6 md6 lg6>
@@ -10,7 +9,6 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </div>
 </template>
 
 <script>
