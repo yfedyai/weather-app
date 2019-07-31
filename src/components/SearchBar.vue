@@ -7,8 +7,8 @@
             v-model="searchText"
             placeholder="Enter city name"
             append-icon="search"
-            @keyup.native.enter="searchLocation(searchText)"
-            @click:append="searchLocation(searchText)"
+            @keyup.native.enter="searchText===null ? $event.prevent : searchLocation(searchText)"
+            @click:append="searchText===null ? $event.prevent : searchLocation(searchText)"
             solo
             hide-details
           ></v-text-field>
@@ -29,7 +29,6 @@ export default {
   methods: {
     searchLocation (searchText) {
       this.$store.dispatch('searchLocation', searchText)
-      console.log('searchText: ', searchText)
     }
   }
 }
