@@ -8,14 +8,14 @@ export default new Vuex.Store({
   state: {
     checkWeekTab: null,
     weather: null,
-    citiSearch: null
+    error: null
 
   },
   mutations: {
     setTabFlag (state, payload) { state.checkWeekTab = payload },
     setWeather (state, payload) { state.weather = payload },
-    citiSearch (state, payload) { state.citiSearch = payload }
-
+    setError (state, payload) { state.error = payload },
+    clearError (state) { state.error = null }
   },
   actions: {
     async searchLocation ({ commit }, payload) {
@@ -23,6 +23,7 @@ export default new Vuex.Store({
         const citуWeather = await axios.get(`${process.env.VUE_APP_URL}&q=${payload}&days=7`)
         commit('setWeather', citуWeather.data)
       } catch (err) {
+        commit('setError', `${err}. Сity name is incorrect`)
         console.log(err)
         throw err
       }
